@@ -1,0 +1,32 @@
+[
+  {
+    "output": "\ndef validate_iam_username(username):\n    import re\n    pattern = r'^[a-z][a-z0-9+,=.@_]*$'\n    return bool(re.match(pattern, username))\n",
+    "test_case": {
+      "task": "Create a Python function that validates an AWS IAM username, ensuring it starts with a letter and contains only lowercase letters, numbers, and these specific characters: +, =, ,, ., @, _",
+      "format": "python",
+      "solution_criteria": "Function should return True for valid usernames, False for invalid ones; must handle edge cases like length and character constraints"
+    },
+    "score": 8.0,
+    "reasoning": "The solution provides a basic regex-based validation but misses important IAM username constraints. AWS IAM usernames have specific requirements around length (1-64 characters) and allowed special characters that aren't fully addressed here."
+  },
+  {
+    "output": "\n{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"s3:GetObject\",\n                \"s3:ListBucket\",\n                \"s3:GetBucketLocation\"\n            ],\n            \"Resource\": [\n                \"arn:aws:s3:::customer-data-bucket\",\n                \"arn:aws:s3:::customer-data-bucket/*\"\n            ]\n        }\n    ]\n}\n",
+    "test_case": {
+      "task": "Write a JSON policy document that grants read-only access to a specific S3 bucket named 'customer-data-bucket'",
+      "format": "json",
+      "solution_criteria": "Policy must use correct IAM policy structure, specify s3:Get* and s3:List* actions, and limit access to the exact bucket path"
+    },
+    "score": 9.0,
+    "reasoning": "The policy provides appropriate read-only access to the specified S3 bucket, correctly defining resource ARNs and using standard read actions. It meets the core requirements while maintaining a clean, straightforward structure."
+  },
+  {
+    "output": "\n^i-[a-z0-9]{7,20}$\n",
+    "test_case": {
+      "task": "Develop a regular expression that matches valid AWS EC2 instance IDs (format: i-[alphanumeric characters], always starts with 'i-', typically 8-21 characters long)",
+      "format": "regex",
+      "solution_criteria": "Regex should precisely match AWS instance ID format, not allowing invalid prefixes or lengths"
+    },
+    "score": 8.0,
+    "reasoning": "The regex captures core instance ID structure but lacks precision in character case and exact length matching. AWS instance IDs typically support mixed-case alphanumeric characters and have more specific length requirements."
+  }
+]

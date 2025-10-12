@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Create a Python function to convert an AWS EC2 instance state code (e.g., 0, 16, 32, 64, 80) to its human-readable description (pending, running, shutting-down, terminated, stopping)"
+  },
+  {
+    "task": "Write a JSON object that defines an AWS IAM policy allowing read-only access to S3 buckets in a specific AWS account"
+  },
+  {
+    "task": "Develop a regular expression that validates AWS resource naming conventions, specifically for validating EC2 instance names (lowercase letters, numbers, hyphens, 1-63 characters long)"
+  }
+]

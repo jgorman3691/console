@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Create a Python function that validates an AWS IAM username, ensuring it starts with a letter and contains only lowercase letters, numbers, and these specific characters: +, =, ,, ., @, _",
+    "format": "python",
+    "solution_criteria": "Function should return True for valid usernames, False for invalid ones; must handle edge cases like length and character constraints"
+  },
+  {
+    "task": "Write a JSON policy document that grants read-only access to a specific S3 bucket named 'customer-data-bucket'",
+    "format": "json",
+    "solution_criteria": "Policy must use correct IAM policy structure, specify s3:Get* and s3:List* actions, and limit access to the exact bucket path"
+  },
+  {
+    "task": "Develop a regular expression that matches valid AWS EC2 instance IDs (format: i-[alphanumeric characters], always starts with 'i-', typically 8-21 characters long)",
+    "format": "regex",
+    "solution_criteria": "Regex should precisely match AWS instance ID format, not allowing invalid prefixes or lengths"
+  }
+]
