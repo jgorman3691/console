@@ -1,0 +1,49 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The diachronic evolution of Indo-European languages reveals complex patterns of linguistic divergence and convergence. Comparative analysis demonstrates how Proto-Indo-European phonological structures gradually transformed across geographical regions, with notable morphological shifts occurring during migration periods. Lexical reconstructions suggest intricate mechanisms of semantic change and language contact that fundamentally reshaped grammatical systems over millennia."
+    },
+    "solution_criteria": [
+      "Identify core linguistic topics in the passage",
+      "Extract topics as a JSON array of strings",
+      "Capture the scholarly linguistic context accurately"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Historical linguistics text discussing language evolution with academic terminology"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Climate change represents a complex global challenge requiring interdisciplinary scientific approaches. Recent research integrates atmospheric science, oceanography, and ecological modeling to understand comprehensive environmental transformations. Satellite observations reveal accelerating Arctic sea ice decline, while paleoclimatological data demonstrate unprecedented warming rates compared to historical geological records. Emerging computational models predict potential feedback mechanisms that could dramatically amplify temperature increases, highlighting the urgent need for systemic environmental interventions."
+    },
+    "solution_criteria": [
+      "Accurately extract 3-5 distinct scientific topics",
+      "Represent topics as a valid JSON array of strings",
+      "Cover breadth of interdisciplinary themes present in the text"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Passage about climate change with interdisciplinary scientific topics from an environmental studies journal"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Cognitive psychology has long explored the intricate mechanisms of memory formation and retrieval, with particular emphasis on how different psychological processes interact. Neuroplasticity research suggests that emotional states significantly influence memory consolidation, while attachment theory provides insights into how early interpersonal experiences shape cognitive development. Moreover, social cognitive theory demonstrates how observational learning and self-efficacy play crucial roles in psychological adaptation and behavioral change."
+    },
+    "solution_criteria": [
+      "Correctly identify core psychological topics",
+      "Generate a JSON array of topics extracted from the text"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Psychology research excerpt covering multiple psychological subdisciplines and theories"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advancements in genomic sequencing technologies have revolutionized our understanding of complex genetic interactions. Single-cell RNA sequencing now enables researchers to map transcriptional profiles at unprecedented resolution, revealing intricate cellular heterogeneity in cancer microenvironments. By integrating machine learning algorithms with high-throughput genomic data, scientists can now predict potential disease mechanisms with greater precision and develop targeted therapeutic interventions."
+    },
+    "solution_criteria": [
+      "Correctly identify all major topics mentioned in the text",
+      "Generate a JSON array containing the extracted topics",
+      "Ensure topics are concise and representative of the passage's content"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Biomedical research abstract detailing emerging genomic research methodologies"
+  }
+]

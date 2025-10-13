@@ -1,0 +1,354 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">6.7 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">66.7%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Test plan generation for an ultramarathon runner with extreme caloric and nutrient requirements</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Ultra marathon performance nutrition for 100km race preparation<br><strong>restrictions:</strong> High protein, gluten-free diet, lactose intolerant</td>
+                <td class="criteria">• Provide minimum 4000 calories for endurance athlete<br>• Include balanced macronutrient distribution (50-25-25 carbs-protein-fat)<br>• Accommodate specified dietary restrictions<br>• Optimize meal timing for pre-race energy loading</td>
+                <td class="output"><pre>Here's a comprehensive meal plan for an ultra marathon athlete with high protein, gluten-free, and lactose-free requirements:
+
+**Calorie Target:** Approximately 3200 calories (based on athlete's high-intensity training)
+**Macronutrient Breakdown:** Protein (180g), Fat (90g), Carbs (420g)
+
+**Meal Plan:**
+
+**Breakfast (6:00 AM):** High-Performance Power Bowl
+- Quinoa (100g, cooked)
+- Grilled chicken breast (150g)
+- Mixed berries (120g)
+- Chia seeds (15g)
+- Almond butter (30g)
+    *Protein: 45g, Fat: 25g, Carbs: 85g*
+
+**Mid-Morning Snack (9:00 AM):** Recovery Protein Smoothie
+- Plant-based protein powder (40g)
+- Banana (120g)
+- Coconut milk (250ml)
+- Spinach (50g)
+    *Protein: 35g, Fat: 15g, Carbs: 50g*
+
+**Lunch (12:00 PM):** Endurance Athlete's Power Plate
+- Grilled wild salmon (180g)
+- Sweet potato (200g)
+- Roasted asparagus (150g)
+- Olive oil dressing (20g)
+    *Protein: 40g, Fat: 25g, Carbs: 90g*
+
+**Pre-Training Snack (3:00 PM):** Energy Boost
+- Rice cakes (50g)
+- Turkey slices (60g)
+- Avocado (50g)
+    *Protein: 20g, Fat: 15g, Carbs: 40g*
+
+**Post-Training Meal (6:00 PM):** Recovery and Rebuild
+- Lean grass-fed beef (160g)
+- Cauliflower rice (150g)
+- Roasted mixed vegetables (200g)
+- Coconut aminos (15g)
+    *Protein: 40g, Fat: 20g, Carbs: 95g*
+
+**Evening Protein Snack (9:00 PM):**
+- Hard-boiled eggs (2 large, 100g)
+- Mixed nuts (30g)
+    *Protein: 15g, Fat: 15g, Carbs: 15g*
+
+**Key Nutritional Considerations:**
+- 100% Gluten-free ingredients
+- Lactose-free alternatives
+- High protein for muscle recovery
+- Complex carbohydrates for sustained energy
+- Balanced healthy fats
+- Micronutrient-dense foods
+
+**Hydration:** 
+- Minimum 3-4 liters of water throughout the day
+- Electrolyte supplementation recommended
+
+**Supplementation Recommendations:**
+- Gluten-free protein powder
+- Electrolyte replacement
+- Omega-3 supplement
+- Multivitamin
+
+**Budget-Friendly Tips:**
+- Buy proteins in bulk
+- Use frozen vegetables
+- Purchase seasonal produce
+- Consider local market options
+
+This meal plan is specifically designed for an ultra marathon athlete, focusing on high-performance nutrition while meeting specific dietary restrictions.</pre></td>
+                <td class="score-col"><span class="score score-low">4</span></td>
+                <td class="reasoning">While the meal plan demonstrates careful nutritional planning and meets many of the specified dietary restrictions, it fails to meet the critical requirements of 4000 daily calories and precise macronutrient distribution for an ultra marathon athlete. The solution provides a structured approach but does not fully optimize nutrition for peak endurance performance.</td>
+            </tr>
+        
+            <tr>
+                <td>Test meal planning for a vegan weightlifter with strict protein and micronutrient needs</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> muscle maintenance and strength optimization<br><strong>restrictions:</strong> vegan diet, high protein requirements</td>
+                <td class="criteria">• Provide minimum 120g of plant-based protein across meals<br>• Include balanced macronutrient distribution<br>• Ensure complete amino acid profile<br>• Incorporate nutrient-dense vegan protein sources</td>
+                <td class="output"><pre>Here's a comprehensive one-day meal plan for a vegan athlete focused on muscle maintenance and strength optimization:
+
+*   **Calorie Target:** Approximately 3200 calories
+*   **Macronutrient Breakdown:** Protein (180g), Fat (95g), Carbs (400g)
+
+**Meal Plan:**
+
+*   **Breakfast (6:30 AM):** Tofu scramble (200g firm tofu) with spinach (100g), nutritional yeast (15g), and whole grain toast (80g). Protein smoothie with pea protein powder (40g), banana (120g), and almond milk (250ml).
+    *   Protein: 50g, Fat: 25g, Carbs: 90g
+    *   Calories: 650
+
+*   **Mid-Morning Snack (9:30 AM):** Homemade protein energy balls (60g) made with hemp seeds, dates, and plant-based protein powder. Mixed nuts (30g).
+    *   Protein: 20g, Fat: 18g, Carbs: 35g
+    *   Calories: 400
+
+*   **Lunch (12:30 PM):** Quinoa and black bean bowl (150g quinoa, 120g black beans) with roasted vegetables (200g mixed vegetables), topped with tahini dressing (30g).
+    *   Protein: 35g, Fat: 20g, Carbs: 100g
+    *   Calories: 700
+
+*   **Pre-Workout Snack (3:30 PM):** Tempeh (100g) with sweet potato (150g).
+    *   Protein: 25g, Fat: 12g, Carbs: 60g
+    *   Calories: 400
+
+*   **Post-Workout Meal (5:30 PM):** Seitan stir-fry (150g seitan) with brown rice (100g dry weight), edamame (100g), and mixed vegetables (150g).
+    *   Protein: 45g, Fat: 15g, Carbs: 90g
+    *   Calories: 650
+
+*   **Evening Snack (8:30 PM):** Chia seed pudding (50g chia seeds) with plant-based protein powder (30g), topped with berries (100g).
+    *   Protein: 25g, Fat: 15g, Carbs: 40g
+    *   Calories: 400
+
+**Key Nutritional Strategies:**
+- High-protein vegan sources (tofu, tempeh, seitan, legumes, protein powder)
+- Complex carbohydrates for sustained energy
+- Healthy plant-based fats
+- Nutrient-dense whole foods
+
+**Budget-Friendly Tips:**
+- Buy beans and grains in bulk
+- Use frozen vegetables
+- Purchase protein powders in larger quantities
+- Choose seasonal produce
+
+This meal plan is specifically designed to meet the athlete's vegan dietary requirements while providing optimal nutrition for muscle maintenance and strength optimization.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution successfully meets all mandatory requirements by providing a structured meal plan with precise caloric and macronutrient targets. It comprehensively addresses the vegan athlete's protein needs through varied plant-based protein sources, strategically timed meals, and a balanced nutritional approach. While the plan meets the core criteria, there are opportunities for more nuanced nutritional optimization.</td>
+            </tr>
+        
+            <tr>
+                <td>Test dietary strategy for a rock climbing athlete with altitude training restrictions</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 72<br><strong>goal:</strong> Optimize performance during high-altitude rock climbing training<br><strong>restrictions:</strong> Low-sodium diet, must maintain high protein intake, limited carbohydrate consumption</td>
+                <td class="criteria">• Provide a balanced meal plan that supports high-intensity altitude training<br>• Ensure protein intake meets athlete's muscle recovery and performance requirements<br>• Accommodate specified dietary restrictions while maintaining nutritional completeness<br>• Design meals that support energy levels for rock climbing activities</td>
+                <td class="output"><pre>Based on the provided athlete information and guidelines, here's a tailored meal plan:
+
+**Athlete Profile: High-Altitude Rock Climbing Training**
+
+* **Calorie Target:** Approximately 2,600 calories
+* **Macronutrient Breakdown:** 
+  - Protein: 170g (26%)
+  - Fat: 90g (31%)
+  - Carbs: 250g (39%)
+
+**Meal Plan:**
+
+* **Breakfast (6:30 AM):** Low-sodium egg white frittata
+  - Egg whites (150g)
+  - Spinach (100g)
+  - Mushrooms (50g)
+  - Olive oil (15g)
+  - Protein: 35g, Fat: 15g, Carbs: 10g
+
+* **Mid-Morning Snack (9:30 AM):** Protein-rich recovery shake
+  - Whey protein isolate (40g)
+  - Almond milk (240g)
+  - Chia seeds (15g)
+  - Protein: 35g, Fat: 10g, Carbs: 15g
+
+* **Lunch (12:30 PM):** Grilled chicken and quinoa bowl
+  - Grilled chicken breast (150g)
+  - Quinoa (75g dry weight)
+  - Roasted vegetables (200g)
+  - Herbs and lemon (minimal sodium)
+  - Protein: 40g, Fat: 12g, Carbs: 70g
+
+* **Afternoon Snack (3:30 PM):** Low-sodium protein pack
+  - Unsalted almonds (30g)
+  - Grilled chicken strips (50g)
+  - Cucumber slices (100g)
+  - Protein: 25g, Fat: 18g, Carbs: 15g
+
+* **Dinner (6:30 PM):** Baked wild-caught salmon with vegetables
+  - Wild salmon (160g)
+  - Asparagus (200g)
+  - Cauliflower rice (150g)
+  - Olive oil (15g)
+  - Protein: 35g, Fat: 25g, Carbs: 40g
+
+* **Evening Recovery Snack (9:00 PM):** Protein-rich light meal
+  - Greek yogurt (non-fat, 150g)
+  - Hemp seeds (15g)
+  - Blueberries (50g)
+  - Protein: 25g, Fat: 10g, Carbs: 20g
+
+**Nutritional Considerations:**
+- Prioritized high-protein, low-sodium foods
+- Limited carbohydrate intake
+- Focused on nutrient-dense, performance-supporting ingredients
+- Supports high-altitude rock climbing training requirements
+
+**Hydration:** 
+- Recommended water intake: 3-4 liters throughout the day
+- Electrolyte supplementation advised for high-altitude training
+
+**Budget-Friendly Tips:**
+- Buy protein sources in bulk
+- Choose frozen vegetables
+- Purchase seasonal produce
+- Look for sales on lean proteins
+
+This meal plan is designed to meet the specific dietary restrictions while providing optimal nutrition for high-altitude rock climbing training.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution comprehensively meets all mandatory requirements by providing a structured meal plan with exact caloric intake (2,600 calories), precise macronutrient breakdown, and detailed meals with specific foods, portions, and timing. The plan addresses the athlete's dietary restrictions while supporting high-intensity training needs. Minor refinements could enhance performance nutrition strategy.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

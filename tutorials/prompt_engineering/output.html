@@ -1,0 +1,220 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">9.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Environmental science research passage discussing climate change impacts, with interdisciplinary technical vocabulary</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent climate change research reveals complex interactions between oceanic carbon sequestration and atmospheric greenhouse gas dynamics. Marine ecosystems play a critical role in global carbon cycles, with phytoplankton absorbing approximately 20-25% of anthropogenic carbon dioxide emissions annually. Emerging satellite monitoring technologies and advanced computational models now enable researchers to track these intricate biogeochemical processes with unprecedented spatial and temporal resolution, highlighting the interconnected nature of climate system feedback mechanisms.</td>
+                <td class="criteria">• Correctly identify 3-5 distinct topics from the passage<br>• Represent topics as a valid JSON array of strings<br>• Capture core thematic elements without excessive detail</td>
+                <td class="output"><pre>[
+    "Climate Change Research",
+    "Carbon Sequestration",
+    "Marine Ecosystem Dynamics",
+    "Phytoplankton Carbon Absorption",
+    "Greenhouse Gas Interactions",
+    "Satellite Environmental Monitoring",
+    "Computational Climate Modeling",
+    "Biogeochemical Process Tracking"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution successfully extracts meaningful topics from the scholarly text, meeting all mandatory requirements. While the number of topics is slightly higher than recommended, each topic is clearly derived from the source material and represents a distinct aspect of the research discussed.</td>
+            </tr>
+        
+            <tr>
+                <td>Scientific article from social psychology exploring human behavior, testing topic extraction with qualitative research terminology</td>
+                <td class="prompt-inputs"><strong>content:</strong> Social conformity represents a critical mechanism in understanding group dynamics and individual behavioral adaptation. Through extensive qualitative research, psychologists have observed that participants frequently modify their expressed beliefs and actions to align with perceived group norms, even when those modifications contradict their personal initial perspectives. The phenomenon, first systematically documented by Solomon Asch in his landmark conformity experiments, reveals complex psychological processes of social influence and normative pressure.</td>
+                <td class="criteria">• Accurately extract 3-5 primary topics from the scholarly text<br>• Represent topics as a valid JSON array of strings<br>• Capture core conceptual themes without verbatim text copying</td>
+                <td class="output"><pre>[
+    "Social Conformity",
+    "Group Dynamics",
+    "Behavioral Adaptation",
+    "Normative Influence",
+    "Psychological Modification",
+    "Solomon Asch Experiments",
+    "Qualitative Research Methodology",
+    "Individual Perspective Alteration"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution successfully meets all mandatory requirements and most secondary criteria. The topics are conceptually relevant to the text, represented as a clean JSON array, and avoid direct text copying. The only minor issues are the slightly excessive number of topics and some granularity in topic specificity.</td>
+            </tr>
+        
+            <tr>
+                <td>Comparative literature analysis text exploring postmodern narrative techniques, testing topic extraction in humanities scholarship</td>
+                <td class="prompt-inputs"><strong>content:</strong> In contemporary comparative literature, postmodern narrative techniques challenge traditional linear storytelling by fragmenting chronology and destabilizing narrative perspective. Authors like Thomas Pynchon and Italo Calvino employ metafictional strategies that blur boundaries between reality and fiction, creating recursive textual landscapes where narration becomes a self-reflexive exploration of literary construction and epistemological uncertainty.</td>
+                <td class="criteria">• Accurately identify core conceptual topics<br>• Capture scholarly terminology and key themes<br>• Produce a JSON array representing extracted topics</td>
+                <td class="output"><pre>[
+    "Postmodern Narrative Techniques",
+    "Non-linear Storytelling",
+    "Narrative Perspective Destabilization",
+    "Metafictional Strategies",
+    "Reality-Fiction Boundary Dissolution",
+    "Textual Self-Reflexivity",
+    "Epistemological Uncertainty",
+    "Comparative Literature Analysis"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution successfully extracts scholarly topics from the passage, capturing the core postmodern literary concepts with academic precision. All mandatory requirements are met, including JSON array format, topic specificity, and absence of extraneous commentary.</td>
+            </tr>
+        
+            <tr>
+                <td>Neuroscience journal excerpt about brain plasticity, requiring nuanced topic identification across complex scientific language</td>
+                <td class="prompt-inputs"><strong>content:</strong> Neural plasticity represents a fundamental mechanism of brain adaptation, wherein synaptic connections dynamically reorganize in response to experience, learning, and neurological challenges. Researchers have discovered that specific neural networks demonstrate remarkable capacity for structural and functional reconfiguration, particularly in regions associated with memory consolidation and motor skill acquisition. These adaptive processes involve complex molecular signaling cascades, including neurotrophic factor expression and synaptic protein modifications that enable neurons to modify their connectivity patterns and computational capabilities.</td>
+                <td class="criteria">• Accurately extract core scientific topics from the passage<br>• Capture both broad and specific neuroscience concepts<br>• Represent topics as a valid JSON array of strings</td>
+                <td class="output"><pre>[
+    "Neural Plasticity",
+    "Synaptic Reorganization",
+    "Brain Adaptation Mechanisms",
+    "Experience-Dependent Neuroplasticity",
+    "Neural Network Reconfiguration",
+    "Memory Consolidation",
+    "Motor Skill Learning",
+    "Molecular Signaling Cascades",
+    "Neurotrophic Factor Expression",
+    "Synaptic Protein Modification"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution successfully extracts scientific topics from the passage, representing the key neuroscience concepts with precision. It meets all mandatory requirements by providing a clean JSON array of topic strings that accurately reflect the text's content. While there are minor nuances in topic selection, the overall extraction is robust and scientifically sound.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+      </body>
+      </html>
+      

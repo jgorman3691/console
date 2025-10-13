@@ -1,0 +1,70 @@
+[
+  {
+    "output": "[\n    \"Climate Change Research\",\n    \"Carbon Sequestration\",\n    \"Marine Ecosystem Dynamics\",\n    \"Phytoplankton Carbon Absorption\",\n    \"Greenhouse Gas Interactions\",\n    \"Satellite Environmental Monitoring\",\n    \"Computational Climate Modeling\",\n    \"Biogeochemical Process Tracking\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent climate change research reveals complex interactions between oceanic carbon sequestration and atmospheric greenhouse gas dynamics. Marine ecosystems play a critical role in global carbon cycles, with phytoplankton absorbing approximately 20-25% of anthropogenic carbon dioxide emissions annually. Emerging satellite monitoring technologies and advanced computational models now enable researchers to track these intricate biogeochemical processes with unprecedented spatial and temporal resolution, highlighting the interconnected nature of climate system feedback mechanisms."
+      },
+      "solution_criteria": [
+        "Correctly identify 3-5 distinct topics from the passage",
+        "Represent topics as a valid JSON array of strings",
+        "Capture core thematic elements without excessive detail"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Environmental science research passage discussing climate change impacts, with interdisciplinary technical vocabulary"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully extracts meaningful topics from the scholarly text, meeting all mandatory requirements. While the number of topics is slightly higher than recommended, each topic is clearly derived from the source material and represents a distinct aspect of the research discussed."
+  },
+  {
+    "output": "[\n    \"Social Conformity\",\n    \"Group Dynamics\",\n    \"Behavioral Adaptation\",\n    \"Normative Influence\",\n    \"Psychological Modification\",\n    \"Solomon Asch Experiments\",\n    \"Qualitative Research Methodology\",\n    \"Individual Perspective Alteration\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Social conformity represents a critical mechanism in understanding group dynamics and individual behavioral adaptation. Through extensive qualitative research, psychologists have observed that participants frequently modify their expressed beliefs and actions to align with perceived group norms, even when those modifications contradict their personal initial perspectives. The phenomenon, first systematically documented by Solomon Asch in his landmark conformity experiments, reveals complex psychological processes of social influence and normative pressure."
+      },
+      "solution_criteria": [
+        "Accurately extract 3-5 primary topics from the scholarly text",
+        "Represent topics as a valid JSON array of strings",
+        "Capture core conceptual themes without verbatim text copying"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Scientific article from social psychology exploring human behavior, testing topic extraction with qualitative research terminology"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully meets all mandatory requirements and most secondary criteria. The topics are conceptually relevant to the text, represented as a clean JSON array, and avoid direct text copying. The only minor issues are the slightly excessive number of topics and some granularity in topic specificity."
+  },
+  {
+    "output": "[\n    \"Postmodern Narrative Techniques\",\n    \"Non-linear Storytelling\",\n    \"Narrative Perspective Destabilization\",\n    \"Metafictional Strategies\",\n    \"Reality-Fiction Boundary Dissolution\",\n    \"Textual Self-Reflexivity\",\n    \"Epistemological Uncertainty\",\n    \"Comparative Literature Analysis\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "In contemporary comparative literature, postmodern narrative techniques challenge traditional linear storytelling by fragmenting chronology and destabilizing narrative perspective. Authors like Thomas Pynchon and Italo Calvino employ metafictional strategies that blur boundaries between reality and fiction, creating recursive textual landscapes where narration becomes a self-reflexive exploration of literary construction and epistemological uncertainty."
+      },
+      "solution_criteria": [
+        "Accurately identify core conceptual topics",
+        "Capture scholarly terminology and key themes",
+        "Produce a JSON array representing extracted topics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Comparative literature analysis text exploring postmodern narrative techniques, testing topic extraction in humanities scholarship"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully extracts scholarly topics from the passage, capturing the core postmodern literary concepts with academic precision. All mandatory requirements are met, including JSON array format, topic specificity, and absence of extraneous commentary."
+  },
+  {
+    "output": "[\n    \"Neural Plasticity\",\n    \"Synaptic Reorganization\",\n    \"Brain Adaptation Mechanisms\",\n    \"Experience-Dependent Neuroplasticity\",\n    \"Neural Network Reconfiguration\",\n    \"Memory Consolidation\",\n    \"Motor Skill Learning\",\n    \"Molecular Signaling Cascades\",\n    \"Neurotrophic Factor Expression\",\n    \"Synaptic Protein Modification\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Neural plasticity represents a fundamental mechanism of brain adaptation, wherein synaptic connections dynamically reorganize in response to experience, learning, and neurological challenges. Researchers have discovered that specific neural networks demonstrate remarkable capacity for structural and functional reconfiguration, particularly in regions associated with memory consolidation and motor skill acquisition. These adaptive processes involve complex molecular signaling cascades, including neurotrophic factor expression and synaptic protein modifications that enable neurons to modify their connectivity patterns and computational capabilities."
+      },
+      "solution_criteria": [
+        "Accurately extract core scientific topics from the passage",
+        "Capture both broad and specific neuroscience concepts",
+        "Represent topics as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Neuroscience journal excerpt about brain plasticity, requiring nuanced topic identification across complex scientific language"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully extracts scientific topics from the passage, representing the key neuroscience concepts with precision. It meets all mandatory requirements by providing a clean JSON array of topic strings that accurately reflect the text's content. While there are minor nuances in topic selection, the overall extraction is robust and scientifically sound."
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The emergence of digital technologies in global economic development represents a critical intersection of policy, innovation, and socioeconomic transformation. Artificial intelligence and blockchain technologies are increasingly reshaping international trade frameworks, creating novel regulatory challenges for policymakers across developed and emerging economies. These technological paradigms not only disrupt traditional economic models but also introduce complex governance mechanisms that require nuanced interdisciplinary approaches to understanding their systemic impacts."
+    },
+    "solution_criteria": [
+      "Correctly identify all primary topics mentioned in the text",
+      "Represent topics as a valid JSON array of strings"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Interdisciplinary policy research document about technological innovation and global economic development with complex intersectional topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "The Silk Road represented a complex network of cultural and economic exchanges between ancient civilizations of Eurasia, particularly connecting China, Central Asia, the Middle East, and Mediterranean regions. Archaeological evidence reveals intricate trade routes that facilitated not only the exchange of goods like silk, spices, and precious metals, but also transmitted sophisticated technologies, religious practices, and artistic traditions across vast geographical distances during the period between 200 BCE and 1450 CE."
+    },
+    "solution_criteria": [
+      "Correctly identify core anthropological and historical themes",
+      "Extract topics as a JSON array of strings",
+      "Capture both broad and specific conceptual elements from the passage"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+    "scenario": "Historical analysis exploring cultural exchanges between ancient civilizations, requiring extraction of anthropological and historical themes"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "75",
+      "goal": "Ultra marathon performance nutrition for 100km race preparation",
+      "restrictions": "High protein, gluten-free diet, lactose intolerant"
+    },
+    "solution_criteria": [
+      "Provide minimum 4000 calories for endurance athlete",
+      "Include balanced macronutrient distribution (50-25-25 carbs-protein-fat)",
+      "Accommodate specified dietary restrictions",
+      "Optimize meal timing for pre-race energy loading"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Test plan generation for an ultramarathon runner with extreme caloric and nutrient requirements"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "85",
+      "goal": "muscle maintenance and strength optimization",
+      "restrictions": "vegan diet, high protein requirements"
+    },
+    "solution_criteria": [
+      "Provide minimum 120g of plant-based protein across meals",
+      "Include balanced macronutrient distribution",
+      "Ensure complete amino acid profile",
+      "Incorporate nutrient-dense vegan protein sources"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Test meal planning for a vegan weightlifter with strict protein and micronutrient needs"
+  },
+  {
+    "prompt_inputs": {
+      "height": "175",
+      "weight": "72",
+      "goal": "Optimize performance during high-altitude rock climbing training",
+      "restrictions": "Low-sodium diet, must maintain high protein intake, limited carbohydrate consumption"
+    },
+    "solution_criteria": [
+      "Provide a balanced meal plan that supports high-intensity altitude training",
+      "Ensure protein intake meets athlete's muscle recovery and performance requirements",
+      "Accommodate specified dietary restrictions while maintaining nutritional completeness",
+      "Design meals that support energy levels for rock climbing activities"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Test dietary strategy for a rock climbing athlete with altitude training restrictions"
+  }
+]

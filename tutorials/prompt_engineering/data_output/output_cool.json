@@ -1,0 +1,69 @@
+[
+  {
+    "output": "[\n    \"Indo-European Language Evolution\",\n    \"Linguistic Divergence\",\n    \"Phonological Structure Transformation\",\n    \"Geographical Migration Patterns\",\n    \"Morphological Linguistic Shifts\",\n    \"Semantic Change Mechanisms\",\n    \"Language Contact Dynamics\",\n    \"Comparative Linguistic Analysis\",\n    \"Proto-Indo-European Reconstruction\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The diachronic evolution of Indo-European languages reveals complex patterns of linguistic divergence and convergence. Comparative analysis demonstrates how Proto-Indo-European phonological structures gradually transformed across geographical regions, with notable morphological shifts occurring during migration periods. Lexical reconstructions suggest intricate mechanisms of semantic change and language contact that fundamentally reshaped grammatical systems over millennia."
+      },
+      "solution_criteria": [
+        "Identify core linguistic topics in the passage",
+        "Extract topics as a JSON array of strings",
+        "Capture the scholarly linguistic context accurately"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Historical linguistics text discussing language evolution with academic terminology"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements perfectly. It successfully extracts topics from the scholarly linguistic text as a JSON array of strings, capturing the key linguistic concepts without additional commentary. The topics are precise, scholarly, and directly derived from the passage's content."
+  },
+  {
+    "output": "[\n    \"Climate Change Complexity\",\n    \"Interdisciplinary Scientific Research\",\n    \"Atmospheric Science Integration\",\n    \"Oceanographic Modeling\",\n    \"Ecological Systems Analysis\",\n    \"Arctic Sea Ice Dynamics\",\n    \"Paleoclimatological Data Trends\",\n    \"Global Warming Acceleration\",\n    \"Computational Climate Prediction\",\n    \"Environmental Feedback Mechanisms\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Climate change represents a complex global challenge requiring interdisciplinary scientific approaches. Recent research integrates atmospheric science, oceanography, and ecological modeling to understand comprehensive environmental transformations. Satellite observations reveal accelerating Arctic sea ice decline, while paleoclimatological data demonstrate unprecedented warming rates compared to historical geological records. Emerging computational models predict potential feedback mechanisms that could dramatically amplify temperature increases, highlighting the urgent need for systemic environmental interventions."
+      },
+      "solution_criteria": [
+        "Accurately extract 3-5 distinct scientific topics",
+        "Represent topics as a valid JSON array of strings",
+        "Cover breadth of interdisciplinary themes present in the text"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Passage about climate change with interdisciplinary scientific topics from an environmental studies journal"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully extracts scientific topics from the passage, covering multiple disciplines like climate science, computational modeling, and environmental research. The topics capture the key themes of the text, represent a breadth of scientific domains, and are presented in a valid JSON array format. The solution meets all mandatory and secondary criteria."
+  },
+  {
+    "output": "[\n    \"memory formation\",\n    \"cognitive processes\",\n    \"neuroplasticity\",\n    \"emotional states\",\n    \"memory consolidation\",\n    \"attachment theory\",\n    \"interpersonal experiences\",\n    \"cognitive development\",\n    \"social cognitive theory\",\n    \"observational learning\",\n    \"self-efficacy\",\n    \"psychological adaptation\",\n    \"behavioral change\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Cognitive psychology has long explored the intricate mechanisms of memory formation and retrieval, with particular emphasis on how different psychological processes interact. Neuroplasticity research suggests that emotional states significantly influence memory consolidation, while attachment theory provides insights into how early interpersonal experiences shape cognitive development. Moreover, social cognitive theory demonstrates how observational learning and self-efficacy play crucial roles in psychological adaptation and behavioral change."
+      },
+      "solution_criteria": [
+        "Correctly identify core psychological topics",
+        "Generate a JSON array of topics extracted from the text"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Psychology research excerpt covering multiple psychological subdisciplines and theories"
+    },
+    "score": 10,
+    "reasoning": "The solution fully meets all mandatory and secondary criteria. It successfully extracts topics from the text as a clean JSON array of strings, capturing the core psychological themes without additional commentary. Each topic is relevant and directly derived from the original passage."
+  },
+  {
+    "output": "[\n    \"Genomic Sequencing Technologies\",\n    \"Single-Cell RNA Sequencing\",\n    \"Transcriptional Profiling\",\n    \"Cellular Heterogeneity\",\n    \"Cancer Microenvironment\",\n    \"Machine Learning Algorithms\",\n    \"High-Throughput Genomic Data\",\n    \"Disease Mechanism Prediction\",\n    \"Targeted Therapeutic Interventions\"\n]",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advancements in genomic sequencing technologies have revolutionized our understanding of complex genetic interactions. Single-cell RNA sequencing now enables researchers to map transcriptional profiles at unprecedented resolution, revealing intricate cellular heterogeneity in cancer microenvironments. By integrating machine learning algorithms with high-throughput genomic data, scientists can now predict potential disease mechanisms with greater precision and develop targeted therapeutic interventions."
+      },
+      "solution_criteria": [
+        "Correctly identify all major topics mentioned in the text",
+        "Generate a JSON array containing the extracted topics",
+        "Ensure topics are concise and representative of the passage's content"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings.\n    ",
+      "scenario": "Biomedical research abstract detailing emerging genomic research methodologies"
+    },
+    "score": 9,
+    "reasoning": "The solution successfully extracts key topics from the genomic research passage, capturing the core scientific concepts and technological approaches mentioned. All mandatory requirements are met with a well-structured JSON array of topic strings that accurately represent the text's content."
+  }
+]
