@@ -1,0 +1,1 @@
+"Write a valid JSON schema spec for the purposes of tool calling for this function.  Follow the best practices listed in the attached documentation."
