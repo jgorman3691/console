@@ -1,0 +1,15 @@
+[
+   {
+      "role": "user",
+      "content": [
+         {
+            "type": "text",
+            "text": "\nRun a detailed analysis to determine major drivers of churn.\nYour final output should include at least one detailed plot summarizing your findings.\nCritical note: Every time you execute code, you're starting with a completely clean slate. \nNo variables or library imports from previous executions exist. You need to redeclare/reimport all variables/libraries.\n            "
+         },
+         {
+            "type": "container_upload",
+            "file_id": "file_011CUKYPA9Qhwnu8YKAPQ6sH"
+         }
+      ]
+   }
+]
